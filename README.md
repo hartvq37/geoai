@@ -1,9 +1,5 @@
 # OpenGeoAI : python tools for GeoAI and remote sensing analysis
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/f72a49f2-32aa-4cf2-ad19-30ba7c74e756" width="200" height="auto"/>
-</p>
-
 Welcome to **OpenGeoAI**! Our mission is to bridge the gap between open-source AI packages and geospatial applications. OpenGeoAI aims to provide GIS users with an easy-to-use tool that allows them to quickly set up and perform geospatial analyses by leveraging the latest advancements in AI technologies.
 
 ## Supported tasks
