@@ -1,4 +1,4 @@
-# OpenGeoAI : tools for GeoAI and remote sensing analysis (DEV)
+# OpenGeoAI : GeoAI tools for remote sensing analysis (DEV)
 
 Welcome to **OpenGeoAI (DEV)**! 
 OpenGeoAI is a suite of tools and resources that provide access to published research and deep learning model implementations for geospatial tasks
