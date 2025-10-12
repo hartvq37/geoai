@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semi-supervised Deep Learning for Urban ITDCD</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f7f9fb; color: #333; line-height: 1.6; }
+    h1, h2 { color: #2a4d69; }
+    a { color: #4a90e2; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; border-radius: 10px; margin: 20px 0; }
+    nav { text-align: center; margin-bottom: 30px; }
+    nav a { margin: 0 10px; padding: 8px 18px; background: #4a90e2; color: white; border-radius: 8px; }
+    nav a:hover { background: #357ABD; }
+    footer { text-align: center; font-size: 0.9em; margin-top: 50px; color: #666; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://hartvq37.github.io/geoai/">🏠 Home</a>
+    <a href="../tree_detection/">Study 2</a>
+  </nav>
+
+  <h1>Improving Individual Tree Detection and Crown Delineation of Urban Trees Using Semi-supervised Deep Learning</h1>
+
+  <p>This study investigates how <strong>semi-supervised deep learning</strong> can improve data efficiency for <em>Individual Tree Detection and Crown Delineation (ITDCD)</em> in urban forests using aerial RGB imagery.</p>
+
+  <h2>1. Study Area and Data</h2>
+  <p>The research was conducted in <strong>Wellington City, New Zealand</strong>, across five urban forest sites that varied in canopy structure and species composition. Aerial RGB imagery was used as the main dataset for model development and evaluation.</p>
+  <img src="../figures/fig_4_1_study_area.jpg" alt="Study area map of Wellington urban forests">
+
+  <h2>2. Methods</h2>
+  <p>Three main training strategies were evaluated:</p>
+  <ul>
+    <li><strong>Supervised baseline</strong> – trained on manually labelled samples of varying sizes.</li>
+    <li><strong>Copy-paste augmentation</strong> – a <em>data-centric</em> approach that creates synthetic crowns by pasting cropped trees into unlabelled images.</li>
+    <li><strong>Pseudo-label self-training</strong> – a <em>model-centric</em> approach that uses predictions on unlabelled data as new training samples to iteratively improve performance.</li>
+  </ul>
+  <img src="../figures/fig_4_4_training_workflow.jpg" alt="Workflow of model training and self-training framework">
+
+  <h2>3. Key Findings</h2>
+  <ul>
+    <li>Simply increasing labelled data did not guarantee higher accuracy — <strong>data informativeness</strong> (measured by entropy) was more important.</li>
+    <li><strong>Copy-paste augmentation</strong> improved accuracy moderately when used with larger labelled datasets.</li>
+    <li><strong>Pseudo-label self-training</strong> achieved the best performance, outperforming all supervised models and data-augmentation variants.</li>
+  </ul>
+
+  <img src="../figures/fig_4_8_results_comparison.jpg" alt="Results comparison between supervised, copy-paste, and pseudo-label models">
+
+  <h2>4. Results Summary</h2>
+  <p>The pseudo-label self-training model achieved:</p>
+  <ul>
+    <li><strong>mAP<sub>0.5</sub>(bbox):</strong> 64.3%</li>
+    <li><strong>mAP<sub>0.5</sub>(seg):</strong> 61.8%</li>
+    <li><strong>F1-score:</strong> 61.4%</li>
+  </ul>
+
+  <h2>5. Conclusions</h2>
+  <p>Pseudo-label self-training effectively improved model performance with limited labelled data. The study demonstrated that high-quality, informative samples contribute more to model improvement than simply increasing dataset size. This highlights the potential of semi-supervised learning to enhance urban forest mapping efficiency.</p>
+
+  <footer>
+    <p>© University of Canterbury | Study 1 – Semi-supervised ITDCD | <a href="../">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
+

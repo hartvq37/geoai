@@ -3,27 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Urban Individual Tree Species Identification via Deep Active Learning</title>
+  <title>Deep Active Learning for Urban Tree Species Identification</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #f9fafc; color: #333; }
-    h1 { color: #2a4d69; }
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f7f9fb; color: #333; line-height: 1.6; }
+    h1, h2 { color: #2a4d69; }
     a { color: #4a90e2; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    img { max-width: 100%; border-radius: 10px; margin: 20px 0; }
+    nav { text-align: center; margin-bottom: 30px; }
+    nav a { margin: 0 10px; padding: 8px 18px; background: #4a90e2; color: white; border-radius: 8px; }
+    nav a:hover { background: #357ABD; }
+    footer { text-align: center; font-size: 0.9em; margin-top: 50px; color: #666; }
   </style>
 </head>
 <body>
 
+  <nav>
+    <a href="https://hartvq37.github.io/geoai/">🏠 Home</a>
+    <a href="../species_classification/">Study 1</a>
+  </nav>
+
   <h1>Urban Individual Tree Species Identification from Aerial Imagery via Deep Active Learning</h1>
-  <p><a href="../">← Back to Home</a></p>
 
-  <p>This study develops a deep learning framework for multi-species ITDCD using aerial RGB images. It focuses on reducing annotation costs and improving generalisability through data-efficient learning techniques.</p>
+  <p>This study develops a <strong>two-stage framework</strong> for <em>multi-species Individual Tree Detection and Crown Delineation (ITDCD)</em> using aerial RGB imagery. It combines automated crown detection and species classification to reduce annotation costs and improve generalisability.</p>
 
+  <h2>1. Study Area and Data</h2>
+  <p>The research used RGB aerial imagery of diverse urban tree environments. Cropped crown images were automatically extracted from detection results for use in species classification.</p>
+  <img src="../figures/fig_5_1_study_area.jpg" alt="Study area and RGB coverage">
+
+  <h2>2. Framework Overview</h2>
+  <p>The framework consists of two key stages:</p>
+  <ol>
+    <li><strong>Tree Detection:</strong> Detect individual crowns using trained ITDCD models.</li>
+    <li><strong>Species Classification:</strong> Apply supervised, semi-supervised (FixMatch), and active learning to classify crown images into seven species categories.</li>
+  </ol>
+  <img src="../figures/fig_5_2_framework.jpg" alt="Overview of the two-stage workflow">
+
+  <h2>3. Key Findings</h2>
   <ul>
-    <li>Evaluate supervised species classification under varying data sizes.</li>
-    <li>Apply <strong>FixMatch</strong> self-training to leverage unlabelled samples.</li>
-    <li>Use <strong>entropy-based active learning</strong> to identify informative samples.</li>
-    <li>Propose an integrated framework combining self-training and active learning.</li>
+    <li>Increasing labelled samples alone did not guarantee higher accuracy — consistent with results from Study 1.</li>
+    <li><strong>FixMatch self-training</strong> improved performance moderately under low-data conditions.</li>
+    <li><strong>Active learning (entropy-based sampling)</strong> outperformed other methods, efficiently identifying informative samples for training.</li>
   </ul>
+
+  <img src="../figures/fig_5_3_feature_visualization.jpg" alt="Feature visualization showing separation between species">
+  <ul>
+    <li>AMost classification errors occurred in images with crown appearances unlike the training data—such as small, overlapping, or noisy crowns—but active learning models correctly classified many of these challenging cases. </li>
+  </ul>
+  <img src="../figures/fig_5_4_classification_errors.jpg" alt="Shared erros between models and correct predictions by active learning">
+  <ul>
+  <h2>4. Results Summary</h2>
+  <p>Using the full dataset and active learning:</p>
+  <ul>
+    <li><strong>Overall F1-score:</strong> 94.94%</li>
+    <li><strong>Class-wise F1:</strong> 91.17%–99.63%</li>
+    <li>Seven target classes including three deciduous, three evergreen, and one mixed ‘other’ class.</li>
+  </ul>
+
+  <img src="../figures/fig_5_7_performance_comparison.jpg" alt="Performance comparison across model structures and learning methods">
+
+  <h2>5. Conclusions</h2>
+  <p>Deep active learning provides a scalable and data-efficient solution for multi-species urban tree mapping. By integrating automated detection with entropy-based sample selection, this study demonstrates that urban forest classification can achieve high accuracy with significantly fewer labelled samples.</p>
+
+  <footer>
+    <p>© University of Canterbury | Study 2 – Deep Active Learning | <a href="../">Back to Home</a></p>
+  </footer>
 
 </body>
 </html>
