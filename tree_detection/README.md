@@ -1,8 +1,3 @@
-# OpenGeoAI : GeoAI tools for remote sensing analysis (DEV)
-
-Welcome to **OpenGeoAI (DEV)**! 
-OpenGeoAI is a suite of tools and resources that provide access to published research and deep learning model implementations for geospatial tasks
-
 ## Paper and code
 ### Title: Improving individual tree detection and crown delineation of urban trees from aerial imagery with semi-supervised deep learning (under review)
 
