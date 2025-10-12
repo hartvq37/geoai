@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Improving Data Efficiency of Deep Learning-based Individual Tree Detection and Crown Delineation (ITDCD) in Urban Forests Using Aerial Imagery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f7f9fb;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: 1.8em;
+      color: #2a4d69;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    nav a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background: #4a90e2;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #357ABD;
+    }
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2a4d69;
+    }
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Improving Data Efficiency of Deep Learning-based Individual Tree Detection and Crown Delineation (ITDCD) in Urban Forests Using Aerial Imagery</h1>
+    <p><strong>University of Canterbury Research Project</strong></p>
+  </header>
+
+  <nav>
+    <a href="subpage1/">Study 1: Semi-supervised ITDCD</a>
+    <a href="subpage2/">Study 2: Active Learning for Species ID</a>
+  </nav>
+
+  <section>
+    <h2>Overview</h2>
+    <p>This repository presents research conducted at the <strong>University of Canterbury</strong> focused on <em>individual tree detection and crown delineation (ITDCD)</em> in urban regions using aerial imagery.</p>
+
+    <h3>Key Challenges</h3>
+    <ul>
+      <li>Most existing studies rely on large labelled datasets or cite limited training data as a key constraint. There has been limited analysis of data efficiency and how to achieve high accuracy with fewer samples.</li>
+      <li>The difficulty of annotating tree species has restricted multi-species ITDCD studies, highlighting the need for a more generalisable and cost-efficient framework.</li>
+      <li>Aerial RGB imagery is an accessible data source but underexplored for multi-species urban forest mapping. It remains uncertain whether RGB imagery alone can reliably differentiate multiple species.</li>
+    </ul>
+
+    <h3>Research Goal</h3>
+    <p>The goal of this research is to enhance <strong>data efficiency</strong> for urban ITDCD using RGB aerial imagery, addressing both general tree detection and multi-species classification.</p>
+
+    <h3>Research Objectives</h3>
+    <ol>
+      <li>
+        <strong>General ITDCD:</strong> Contrast data efficiency of various deep learning approaches.
+        <ul>
+          <li>Compare supervised training under different data sizes.</li>
+          <li>Assess informativeness using entropy measurement.</li>
+          <li>Evaluate copy-paste augmentation and pseudo-label self-training.</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Multi-species ITDCD:</strong> Develop a data-efficient deep learning approach for species-level crown delineation.
+        <ul>
+          <li>Test species classification from individual crown segments.</li>
+          <li>Compare supervised and self-training performance.</li>
+          <li>Apply active learning (entropy-based sample selection).</li>
+          <li>Propose a final integrated framework.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <p>The findings are presented across two studies below:</p>
+    <ul>
+      <li><a href="subpage1/">Study 1: Semi-supervised Deep Learning for Urban ITDCD</a></li>
+      <li><a href="subpage2/">Study 2: Deep Active Learning for Urban Tree Species Identification</a></li>
+    </ul>
+  </section>
+
+</body>
+</html>
