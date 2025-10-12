@@ -12,14 +12,14 @@ The goal of this research is to improve **data efficiency** in deep learning mod
 
 This project presents two major research studies, each available in its own subfolder and as part of the GitHub Pages site:
 
-### 1️⃣ [Improving Individual Tree Detection and Crown Delineation of Urban Trees Using Semi-supervised Deep Learning](subpage1/)
+### 1️⃣ [Improving Individual Tree Detection and Crown Delineation of Urban Trees Using Semi-supervised Deep Learning](tree_detection/)
 This study focuses on improving **general ITDCD** by exploring data-efficient approaches:
 - Compare supervised learning under varying data sizes  
 - Measure dataset informativeness using **entropy metrics**  
 - Evaluate **copy-paste augmentation** (data-centric approach)  
 - Evaluate **pseudo-label self-training** (model-centric approach)
 
-### 2️⃣ [Urban Individual Tree Species Identification from Aerial Imagery via Deep Active Learning](subpage2/)
+### 2️⃣ [Urban Individual Tree Species Identification from Aerial Imagery via Deep Active Learning](species_classification/)
 This study focuses on **multi-species ITDCD**, aiming to reduce annotation costs:
 - Evaluate species classification performance under different data sizes  
 - Apply **FixMatch self-training** to leverage unlabelled samples  
