@@ -3,8 +3,8 @@
 This repository contains research conducted at the **University of Canterbury** focusing on **individual tree detection and crown delineation (ITDCD)** in urban forests using aerial RGB imagery.  
 The goal of this research is to improve **data efficiency** in deep learning models for ITDCD — achieving strong performance with reduced labeling effort.
 
-🔗 **View the full website here:**  
-👉 [https://USERNAME.github.io/geoai/](https://USERNAME.github.io/geoai/)
+🔗 **View the full research content and code explaination here:**  
+👉 [https://hartvq37.github.io/geoai/](https://hartvq37.github.io/geoai/)
 
 ---
 
